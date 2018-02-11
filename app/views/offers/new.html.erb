@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@offer) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :offerType, "Offer type" %>
+      <%= f.text_field :offerType, class: 'form-control' %>
+
+      <%= f.label :paymentMethodID, "Payment method" %>
+      <%= f.text_field :paymentMethodID, class: 'form-control'%>
+
+      <%= f.label :localCurrency, "Local currency" %>
+      <%= f.text_field :localCurrency, class: 'form-control' %>
+
+      <%= f.label :exchangeRate, "Exchange rate" %>
+      <%= f.number_field :exchangeRate, class: 'form-control' %>
+
+      <%= f.label :location, "Location" %>
+      <%= f.text_field :location , class: 'form-control'%>
+
+      <%= f.label :headline, "Head line" %>
+      <%= f.text_field :headline , class: 'form-control'%>
+
+      <%= f.label :termsAgreement, "Terms agreement" %>
+      <%= f.text_field :termsAgreement , class: 'form-control'%>
+
+      <%= f.label :standardHours, "Standard hours" %>
+      <%= f.text_field :standardHours , class: 'form-control'%>
+
+      <%= f.submit "Create new offer", class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>
