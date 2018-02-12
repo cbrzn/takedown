@@ -4,13 +4,13 @@
     <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :offerType, "Offer type" %>
-      <%= f.text_field :offerType, class: 'form-control' %>
+      <%= f.select :offerType, [ 'Buy', 'Sell' ], class: 'form-control'%>
 
       <%= f.label :paymentMethodID, "Payment method" %>
-      <%= f.text_field :paymentMethodID, class: 'form-control'%>
+      <%= f.select :paymentMethodID, ['Cash in person', 'Bank transfer', 'PayPal', 'International Wire Transfer', 'Venmo', 'Zelle' ] %>
 
       <%= f.label :localCurrency, "Local currency" %>
-      <%= f.text_field :localCurrency, class: 'form-control' %>
+      <%= f.select :localCurrency, ['USD', 'EUR', 'GBP'] %>
 
       <%= f.label :exchangeRate, "Exchange rate" %>
       <%= f.number_field :exchangeRate, class: 'form-control' %>
